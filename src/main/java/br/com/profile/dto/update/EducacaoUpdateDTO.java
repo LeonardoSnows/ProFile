@@ -1,10 +1,10 @@
-package br.com.profile.dto;
-
-import org.springframework.cglib.core.Local;
+package br.com.profile.dto.update;
 
 import java.time.LocalDate;
 
-public record EducacaoDTO(
+public record EducacaoUpdateDTO(
+
+        String id,
         String instituicao,
         String curso,
         String grau,

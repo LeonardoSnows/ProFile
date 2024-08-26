@@ -1,9 +1,11 @@
-package br.com.profile.dto;
+package br.com.profile.dto.update;
 
 import java.time.LocalDate;
 
-public record ExperienciaProfissionalDTO(
+public record ExperienciaProfissionalUpdateDTO(
 
+        String id,
+        String perfil,
         String cargo,
         String empresa,
         String descricao,
