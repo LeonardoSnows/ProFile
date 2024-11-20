@@ -1,0 +1,14 @@
+.forms-perfil {
+  align-items: center;
+  width: 50%;
+}
+
+.forms-perfil input {
+  margin-bottom: 10px;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NbButtonModule, NbCardModule, NbIconModule, NbLayoutModule, NbMenuModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
 import { BrowserModule } from '@angular/platform-browser';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { NbButtonModule, NbCardModule, NbFormFieldModule, NbIconModule, NbInputModule, NbLayoutModule, NbMenuModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ExperienceFormComponent } from './form/experience-form/experience-form.component';
+import { PerfilFormComponent } from './form/perfil-form/perfil-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PerfilFormComponent,
+    ExperienceFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,7 +26,12 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbSidebarModule.forRoot(),
     NbButtonModule,
     NbIconModule,
-    NbEvaIconsModule
+    NbEvaIconsModule,
+    NbInputModule,
+    NbFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
