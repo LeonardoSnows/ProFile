@@ -1,67 +1,67 @@
-# Descrição do Projeto: ProFile
+# Project Description: ProFile
 
-### Este projeto visa desenvolver uma plataforma centralizada onde profissionais podem armazenar e gerenciar suas informações profissionais de forma organizada e detalhada. O objetivo principal é facilitar o preenchimento de formulários de candidatura a empregos em diversas plataformas, poupando tempo e esforço aos usuários.
+### This project aims to develop a centralized platform where professionals can store and manage their professional information in an organized and detailed way. The main goal is to make it easier to fill out job application forms on different platforms, saving users time and effort.
 
-# Benefícios para os Usuários
-- Economia de Tempo: Não será mais necessário preencher repetidamente os mesmos campos em diversos formulários.
-- Precisão das Informações: Garante que as informações profissionais estejam sempre corretas e atualizadas em todas as plataformas.
-- Facilidade de Gerenciamento: Permite controlar todas as informações em um único lugar.
-- Maior Visibilidade: Aumenta as chances de ser notado por recrutadores em diversas plataformas.
+# Benefits for Users
+- Time Savings: It will no longer be necessary to repeatedly fill out the same fields on different forms.
+- Accuracy of Information: Ensures that professional information is always correct and up-to-date on all platforms.
+- Ease of Management: Allows you to control all information in a single place.
+- Greater Visibility: Increases the chances of being noticed by recruiters on different platforms.
 
-# Tecnologias Utilizadas
+# Technologies Used
 - Angular 18+
 - Java 17
 - SQL Server
 - Docker
 
-# Contribuições
+# Contributions
 
-Contribuições são sempre bem-vindas! Se você tiver sugestões, ideias ou quiser ajudar no desenvolvimento deste projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+Contributions are always welcome! If you have suggestions, ideas or want to help in the development of this project, feel free to open an issue or send a pull request.
 
-# Diagrama
+# Diagram
 ```mermaid
 erDiagram
-    Usuario {
+    User {
         int id PK
-        varchar nome
-        varchar sobrenome
+        varchar firstName
+        varchar lastName
         varchar email
-        int telefone
-        boolean ativo
+        int phone
+        boolean active
     }
-    Experiencia {
+    Experience {
         int id PK
-        int usuario_id FK
-        varchar empresa
-        varchar cargo
-        varchar descricaoCargo
-        date dataInicio
-        date dataFim
+        int userId FK
+        varchar company
+        varchar role
+        varchar description
+        date startDate
+        date endDate
     }
-    Habilidade {
+    Skill {
         int id PK
-        int usuario_id FK
-        varchar nome
-        varchar nivel
+        int userId FK
+        varchar name
+        varchar level
     }
-    Educacao {
+    Education {
         int id PK
-        int usuario_id FK
-        varchar instituicao
-        varchar curso
-        varchar grau
-        date dataInicio
-        date dataFim
+        int userId FK
+        varchar institution
+        varchar course
+        varchar degree
+        date startDate
+        date endDate
     }
-    Referencia {
+    Reference {
         int id PK
-        int usuario_id FK
-        varchar nome
-        varchar contato
-        varchar descricaoReferencia
+         int userId FK
+        varchar name
+        varchar contact
+        varchar description
     }
-    Usuario ||--o{ Experiencia : "possui"
-    Usuario ||--o{ Habilidade : "possui"
-    Usuario ||--o{ Educacao : "possui"
-    Usuario ||--o{ Referencia : "possui"
+    User ||--o{ Experience : "has"
+    User ||--o{ Skill : "has"
+    User ||--o{ Education : "has"
+    User ||--o{ Reference : "has"
 ```
